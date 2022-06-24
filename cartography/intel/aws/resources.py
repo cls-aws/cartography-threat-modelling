@@ -10,6 +10,7 @@ from . import elasticache
 from . import elasticsearch
 from . import emr
 from . import iam
+from . import inspector2
 from . import kms
 from . import lambda_function
 from . import permission_relationships
@@ -64,6 +65,7 @@ RESOURCE_FUNCTIONS: Dict = {
     'ec2:reserved_instances': sync_ec2_reserved_instances,
     'ec2:volumes': sync_ebs_volumes,
     'ec2:snapshots': sync_ebs_snapshots,
+    'inspector2' : inspector2.sync,
     'ecr': ecr.sync,
     'ecs': ecs.sync,
     'eks': eks.sync,
